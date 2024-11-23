@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar';
-import Home from './Home'
+import Home from './Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Create from './Create';
 
 function App() {
   const title = "Welcome to the new blog";
@@ -7,12 +9,22 @@ function App() {
   const link = "https://www.google.com";
 
   return (
-    <div className="h-screen mx-28 my-5">
-      <Navbar/>
-      <div>
-        <Home/>
+    <Router>
+      <div className="h-screen mx-28 my-5">
+        {/* Nav is always there no matter the route */}
+        <Navbar/>
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+            <Route path="/create">
+              <Create/>
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   )
 }
 
