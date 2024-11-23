@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Home from './Home'
 
 function App() {
   const title = "Welcome to the new blog";
@@ -6,8 +7,11 @@ function App() {
   const link = "https://www.google.com";
 
   return (
-    <div className="grid grid-rows-[auto,1fr,auto]  h-screen">
+    <div className="h-screen mx-28 my-5">
       <Navbar/>
+      <div>
+        <Home/>
+      </div>
     </div>
   )
 }
