@@ -1,15 +1,13 @@
-import { useState } from 'react';
-import Header from './components/Header.jsx';
-import Article from './components/Article.jsx';
-import Footer from './components/Footer.jsx';
+import Navbar from './components/Navbar';
 
 function App() {
+  const title = "Welcome to the new blog";
+  const likes = 50;
+  const link = "https://www.google.com";
 
   return (
     <div className="grid grid-rows-[auto,1fr,auto]  h-screen">
-      <Header/>
-      <Article/>
-      <Footer/>
+      <Navbar/>
     </div>
   )
 }
